@@ -32,7 +32,7 @@ module.exports = {
         vechain_solo: {
             url: VECHAIN_URL_SOLO,
             accounts: {
-                mnemonic: 'denial kitchen pet squirrel other broom bar gas better priority spoil cross',
+                mnemonic: 'canvas list mail reflect wrong want entry piece napkin venture magic lunar',
                 count: 10,
                 path: "m/44'/818'/0'/0",
             },

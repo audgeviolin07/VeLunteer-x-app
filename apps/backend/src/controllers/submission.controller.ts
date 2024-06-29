@@ -25,7 +25,7 @@ export class SubmissionController {
       };
 
       // Submission validation with smart contract
-      await this.contracts.validateSubmission(submissionRequest);
+      //ßawait this.contracts.validateSubmission(submissionRequest);
 
       const validationResult = await this.openai.validateImage(body.image);
 
@@ -35,7 +35,7 @@ export class SubmissionController {
 
       const validityFactor = validationResult['validityFactor'];
 
-      if (validityFactor === 1) await this.contracts.registerSubmission(submissionRequest);
+      //if (validityFactor === 1) await this.contracts.registerSubmission(submissionRequest);
 
       res.status(200).json({ validation: validationResult });
     } catch (error) {

@@ -10,8 +10,8 @@ const themeConfig = {
   },
 
   // 2. Add your color mode config
-  initialColorMode: "system",
-  useSystemColorMode: true,
+  initialColorMode: "dark",
+  useSystemColorMode: false,
 
   semanticTokens: {
     colors: {
@@ -19,7 +19,7 @@ const themeConfig = {
         _light: "#1E1E1E",
       },
       "chakra-body-bg": {
-        _light: "#F7F7F7",
+        _light: "#435161",
       },
     },
   },

@@ -12,9 +12,10 @@ export class OpenaiService {
                     Analyze the image provided. The image MUST satisfy all of the following criteria:
                         1. It must have as subject a form of proof of donation from an NGO or a charity.
                         2. It must not be a screenshot.
-                        3. It must include the date of the purchase in Donation Date.
-                        4. It must include the declared value of the donation.
-                        5. The box for "Food described as" must be ticked and the description must be filled.
+                        3. It must include the date of the purchase in the "Donation Date" field.
+                        4. It must include the declared value of the donation in the "Declared Value" field.
+                        5. The box for "Food described as" must be ticked, crossed or checked and the description must be filled with some form of food.
+                        6. There must exist a signature below the "Sincerely," text at the end of the form.
                     Please respond using a JSON object without comments and do not add any other descriptions and comments:
                     {
                     'validityFactor': number, // 0-1, 1 if it satisfies all the criteria, 0 otherwise

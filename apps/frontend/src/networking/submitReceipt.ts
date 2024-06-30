@@ -6,6 +6,9 @@ export type Response = {
   validation: {
     validityFactor: number;
     descriptionOfAnalysis: string;
+    donationValue: number;
+    foodDescription: string;
+    donationDate: string;
   };
 };
 

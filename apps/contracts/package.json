@@ -9,8 +9,11 @@
     "deploy:ecoearn:solo": "npx hardhat run scripts/deployEcoEarn.ts --network vechain_solo",
     "deploy:token:testnet": "npx hardhat run scripts/deployToken.ts --network vechain_testnet",
     "deploy:ecoearn:testnet": "npx hardhat run scripts/deployEcoEarn.ts --network vechain_testnet",
+    "deploy:token:mainnet": "npx hardhat run scripts/deployToken.ts --network vechain_mainnet",
+    "deploy:ecoearn:mainnet": "npx hardhat run scripts/deployEcoEarn.ts --network vechain_mainnet",
     "deploy:solo": "yarn solo-up && yarn deploy:token:solo && yarn deploy:ecoearn:solo",
     "deploy:testnet": "yarn deploy:token:testnet && yarn deploy:ecoearn:testnet",
+    "deploy:mainnet": "yarn deploy:token:mainnet && yarn deploy:ecoearn:mainnet",
     "solo-up": "make solo-up"
   },
   "dependencies": {

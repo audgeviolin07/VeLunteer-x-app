@@ -30,6 +30,11 @@
       "dependsOn": [
         "^build"
       ]
+    },
+    "deploy:mainnet": {
+      "dependsOn": [
+        "^build"
+      ]
     }
   }
 }

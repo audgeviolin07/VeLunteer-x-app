@@ -4,8 +4,8 @@ import { ethers } from 'hardhat';
 async function deployToken() {
     const [owner] = await ethers.getSigners();
 
-    const token = await ethers.getContractFactory('Token');
-    const tokenInstance = await token.deploy(owner);
+    const b3trToken = await ethers.getContractFactory('B3TR');
+    const tokenInstance = await b3trToken.deploy(owner);
 
     const tokenAddress = await tokenInstance.getAddress();
 

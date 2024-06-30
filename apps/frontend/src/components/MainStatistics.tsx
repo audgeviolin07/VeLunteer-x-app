@@ -3,20 +3,16 @@ import { Container, Stat, StatLabel, StatNumber, StatHelpText, StatGroup } from 
 export const MainStatistics = () => {
     return (
         <Container
-            mt={{ base: 4, md: 10 }}
-            maxW={"container.xl"}
-            mb={{ base: 4, md: 10 }}
-            display={"flex"}
-            flex={1}
-            alignItems={"flex-center"} // Align items to the left
-            justifyContent={"flex-center"}
-            flexDirection={"column"}
+            textColor={"white"}
+            width={"100%"}
         >
             {
             // use the useConnex hook to grab data from the blockchain
             }
 
-            <StatGroup>
+            <StatGroup
+                textAlign={"center"}
+            >
                 <Stat>
                     <StatLabel>Files Uploaded</StatLabel>
                     <StatNumber>345</StatNumber>

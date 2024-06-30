@@ -43,28 +43,18 @@ function App() {
               flexDirection={"row"}
             // width={"50%"} // Set container width to half
             >
+              <VStack p={4}>
+                <InfoCard />
+                <Instructions />
+                <Dropzone />
+              </VStack>
+              <VStack p={4} align={"center"} >
+                <Flex>
+                  <MainImage />
+                </Flex>
+                <MainStatistics />
+              </VStack>
 
-<VStack p={4}>
-              <InfoCard />
-              <Instructions />
-              
-  </VStack>
-
-  <VStack p={4} >
-      <Flex>
-        <MainImage/>
-             
-              </Flex>
-  </VStack>
-
-  <VStack p={4} >
-      
-      <Dropzone />
-      <SubmissionModal />
-             
-        
-  </VStack>
-              
             </Container>
           </Flex>
           <Footer />

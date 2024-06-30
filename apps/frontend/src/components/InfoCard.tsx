@@ -24,7 +24,7 @@ export const InfoCard = () => {
             alignItems={"center"}
           >
             <HStack alignSelf={{ base: "left", md: "flex-start" }}>
-              <Image src="/vlnlogo.png" h={16} borderRadius={16} />
+              <Image src="/apple.png" h={16} borderRadius={16} />
               <Text fontSize={24} fontWeight={800}>
               B3TRBite
               </Text>
@@ -34,16 +34,7 @@ export const InfoCard = () => {
               direction={{ base: "column", md: "row" }}
             >
               <Link isExternal href="https://github.com/vechain/x-app-template">
-                <Button
-                  rounded={"full"}
-                  colorScheme="primary"
-                  size={"md"}
-                  leftIcon={<MdOutlineArrowOutward />}
-                  mt={{ base: 2, md: 0 }}
-                  ml={{ base: 0, md: 2 }}
-                >
-                  Github repository
-                </Button>
+                
               </Link>
             </Flex>
           </Flex>

@@ -8,7 +8,7 @@ export const MainStatistics = () => {
             pl={"20px"} // Add padding to the left to move content slightly to the right
         >
             <Box textAlign={"center"} mb={4}>
-                <Heading>B3TRBite</Heading>
+                <Heading textShadow="0 0 20px rgba(255, 255, 255, 1)">B3TRBite</Heading>
             </Box>
 
             {
@@ -19,19 +19,19 @@ export const MainStatistics = () => {
                 textAlign={"center"}
             >
                 <Stat>
-                    <StatLabel>Files Uploaded</StatLabel>
-                    <StatNumber>345</StatNumber>
-                    <StatHelpText>files</StatHelpText>
+                    <StatLabel textShadow="0 0 20px rgba(255, 255, 255, 1)">Files Uploaded</StatLabel>
+                    <StatNumber textShadow="0 0 20px rgba(255, 255, 255, 1)">345</StatNumber>
+                    <StatHelpText textShadow="0 0 20px rgba(255, 255, 255, 1)">files</StatHelpText>
                 </Stat>
                 <Stat>
-                    <StatLabel>Files Processed</StatLabel>
-                    <StatNumber>345</StatNumber>
-                    <StatHelpText>files</StatHelpText>
+                    <StatLabel textShadow="0 0 20px rgba(255, 255, 255, 1)">Files Processed</StatLabel>
+                    <StatNumber textShadow="0 0 20px rgba(255, 255, 255, 1)">345</StatNumber>
+                    <StatHelpText textShadow="0 0 20px rgba(255, 255, 255, 1)">files</StatHelpText>
                 </Stat>
                 <Stat>
-                    <StatLabel>Files Failed</StatLabel>
-                    <StatNumber>345</StatNumber>
-                    <StatHelpText>files</StatHelpText>
+                    <StatLabel textShadow="0 0 20px rgba(255, 255, 255, 1)">Files Failed</StatLabel>
+                    <StatNumber textShadow="0 0 20px rgba(255, 255, 255, 1)">345</StatNumber>
+                    <StatHelpText textShadow="0 0 20px rgba(255, 255, 255, 1)">files</StatHelpText>
                 </Stat>
             </StatGroup>
         </Container>

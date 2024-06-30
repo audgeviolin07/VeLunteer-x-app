@@ -35,9 +35,16 @@ export class SubmissionController {
 
       const validityFactor = validationResult['validityFactor'];
 
+      const usdToB3tr = 6.25; // placeholder value
+
       console.log('validationResult', validationResult);
 
-      if (validityFactor === 1) await this.contracts.registerSubmission(submissionRequest, validationResult['foodDescription']);
+      if (validityFactor === 1)
+        await this.contracts.registerSubmission(
+          submissionRequest,
+          Math.floor(validationResult['donationValue'] * usdToB3tr),
+          validationResult['foodDescription'],
+        );
  
       res.status(200).json({ validation: validationResult });
     } catch (error) {

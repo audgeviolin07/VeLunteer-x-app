@@ -9,10 +9,10 @@ import { config } from '@repo/config-contract';
 import { TransactionHandler, clauseBuilder, coder } from '@vechain/sdk-core';
 @Service()
 export class ContractsService {
-  public async registerSubmission(submission: Submission, foodDescription: string): Promise<void> {
+  public async registerSubmission(submission: Submission, donationValue: number, foodDescription: string): Promise<void> {
     const clause = clauseBuilder.functionInteraction(config.CONTRACT_ADDRESS, coder.createInterface(B3TRBiteABI).getFunction('registerDonation'), [
       submission.address,
-      `${REWARD_AMOUNT}`,
+      `${donationValue}`,
       foodDescription,
     ]);
 

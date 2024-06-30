@@ -108,6 +108,7 @@ export const Dropzone = () => {
         display="flex"
         alignItems="center"
         justifyContent="center"
+        transition={"all 0.3s"}
       >
         <input {...getInputProps()} />
         <HStack>

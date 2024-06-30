@@ -1,6 +1,12 @@
 import { Box, Container, HStack, Image, Text } from "@chakra-ui/react";
 import { ConnectWalletButton } from "./ConnectWalletButton";
+import { useNavigate } from "react-router-dom";
+
+
 export const Navbar = () => {
+
+  const navigate = useNavigate();
+
   return (
     <Box
       px={0}
@@ -21,13 +27,12 @@ export const Navbar = () => {
         maxW={"container.xl"}
       >
       
-      <HStack flex={1} justifyContent="start" alignItems="center">
-      <Image src="/apple.png" width="50px" height="50px" alt="Apple Logo" />
-      <Text fontSize="xl" ml={2}>B3TRBite</Text>
-    </HStack>
+      <HStack flex={1} justifyContent="start" alignItems="center" onClick={() => navigate("/")} cursor={"pointer"}>
+        <Image src="/apple.png" width="50px" height={"auto"} alt="Apple Logo" />
+        <Text fontSize="xl" ml={2} fontWeight={"bold"}>B3TRBite</Text>
+      </HStack>
 
         <HStack flex={1} spacing={4} justifyContent={"end"}>
-          
           <ConnectWalletButton />
         </HStack>
       </Container>

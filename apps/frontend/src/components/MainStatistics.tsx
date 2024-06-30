@@ -19,19 +19,19 @@ export const MainStatistics = () => {
                 textAlign={"center"}
             >
                 <Stat>
-                    <StatLabel textShadow="0 0 20px rgba(255, 255, 255, 1)">Files Uploaded</StatLabel>
-                    <StatNumber textShadow="0 0 20px rgba(255, 255, 255, 1)">345</StatNumber>
-                    <StatHelpText textShadow="0 0 20px rgba(255, 255, 255, 1)">files</StatHelpText>
+                    <StatLabel textShadow="0 0 20px rgba(255, 255, 255, 1)">Total Value Donated</StatLabel>
+                    <StatNumber textShadow="0 0 20px rgba(255, 255, 255, 1)">360,000</StatNumber>
+                    {/* <StatHelpText textShadow="0 0 20px rgba(255, 255, 255, 1)">dollars</StatHelpText> */}
                 </Stat>
                 <Stat>
-                    <StatLabel textShadow="0 0 20px rgba(255, 255, 255, 1)">Files Processed</StatLabel>
+                    <StatLabel textShadow="0 0 20px rgba(255, 255, 255, 1)">Meals Provided</StatLabel>
                     <StatNumber textShadow="0 0 20px rgba(255, 255, 255, 1)">345</StatNumber>
-                    <StatHelpText textShadow="0 0 20px rgba(255, 255, 255, 1)">files</StatHelpText>
+                    {/* <StatHelpText textShadow="0 0 20px rgba(255, 255, 255, 1)">files</StatHelpText> */}
                 </Stat>
                 <Stat>
                     <StatLabel textShadow="0 0 20px rgba(255, 255, 255, 1)">Files Failed</StatLabel>
                     <StatNumber textShadow="0 0 20px rgba(255, 255, 255, 1)">345</StatNumber>
-                    <StatHelpText textShadow="0 0 20px rgba(255, 255, 255, 1)">files</StatHelpText>
+                    {/* <StatHelpText textShadow="0 0 20px rgba(255, 255, 255, 1)">files</StatHelpText> */}
                 </Stat>
             </StatGroup>
         </Container>

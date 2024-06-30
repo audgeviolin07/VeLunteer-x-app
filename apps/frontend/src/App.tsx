@@ -53,7 +53,7 @@ function App() {
                           <Instructions />
                           <Dropzone />
                         </VStack>
-                        <VStack p={4} align={"center"}>
+                        <VStack p={4} align={"center"} gap={10}>
                           <Flex>
                             <MainImage />
                           </Flex>

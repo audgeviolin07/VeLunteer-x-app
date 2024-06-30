@@ -3,19 +3,18 @@ import { HttpException } from '@/exceptions/HttpException';
 import { Submission } from '@/interfaces/submission.interface';
 import { thor } from '@/utils/thor';
 import { Service } from 'typedi';
-import { EcoEarnABI } from '@/utils/const';
+import { B3TRBiteABI } from '@/utils/const';
 import { ethers } from 'ethers';
 import { config } from '@repo/config-contract';
 import { TransactionHandler, clauseBuilder, coder } from '@vechain/sdk-core';
 @Service()
 export class ContractsService {
-  public async registerSubmission(submission: Submission): Promise<void> {
-    const clause = clauseBuilder.functionInteraction(
-      config.CONTRACT_ADDRESS,
-      coder.createInterface(EcoEarnABI).getFunction('registerValidSubmission'),
-      [submission.address, `0x${ethers.parseEther(REWARD_AMOUNT).toString(16)}`],
-    );
-
+  public async registerSubmission(submission: Submission, foodDescription: string): Promise<void> {
+    const clause = clauseBuilder.functionInteraction(config.CONTRACT_ADDRESS, coder.createInterface(B3TRBiteABI).getFunction('registerDonation'), [
+      submission.userAddress,,
+      `${REWARD_AMOUNT}`,
+      foodDescription,
+    ]);
 
     //commenting as the gas estimation is throwing error defaulting to 300000
     //const gasResult = await thor.gas.estimateGas([clause], ADMIN_ADDRESS);
@@ -25,16 +24,7 @@ export class ContractsService {
 
     const signedTx = TransactionHandler.sign(txBody, Buffer.from(ADMIN_PRIVATE_KEY));
 
-    await thor.transactions.sendTransaction(signedTx);
-  }
-
-  public async validateSubmission(submission: Submission): Promise<void> {
-    const isMaxSubmissionsReached = await thor.contracts.executeCall(
-      config.CONTRACT_ADDRESS,
-      coder.createInterface(EcoEarnABI).getFunction('isUserMaxSubmissionsReached'),
-      [submission.address],
-    );
-
-    if (Boolean(isMaxSubmissionsReached[0]) === true) throw new HttpException(409, `EcoEarn: Max submissions reached for this cycle`);
+    const tx = await thor.transactions.sendTransaction(signedTx);
+    console.log('receipt', tx);
   }
 }

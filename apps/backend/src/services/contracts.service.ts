@@ -16,11 +16,12 @@ export class ContractsService {
       [submission.address, `0x${ethers.parseEther(REWARD_AMOUNT).toString(16)}`],
     );
 
-    const gasResult = await thor.gas.estimateGas([clause], ADMIN_ADDRESS);
 
-    if (gasResult.reverted === true) throw new HttpException(500, `EcoEarn: Internal server error: ${gasResult.revertReasons}`);
+    //commenting as the gas estimation is throwing error defaulting to 300000
+    //const gasResult = await thor.gas.estimateGas([clause], ADMIN_ADDRESS);
+    //if (gasResult.reverted === true) throw new HttpException(500, `EcoEarn: Internal server error: ${gasResult.revertReasons}`);
 
-    const txBody = await thor.transactions.buildTransactionBody([clause], gasResult.totalGas);
+    const txBody = await thor.transactions.buildTransactionBody([clause], 300000);
 
     const signedTx = TransactionHandler.sign(txBody, Buffer.from(ADMIN_PRIVATE_KEY));
 

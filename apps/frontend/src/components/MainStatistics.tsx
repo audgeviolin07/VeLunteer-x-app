@@ -1,4 +1,4 @@
-import { Container, StatGroup, Stat, StatLabel, StatNumber, StatHelpText, Box, Heading } from "@chakra-ui/react"; // Make sure to import required components
+import { Container, StatGroup, Stat, StatLabel, StatNumber, Box, Heading } from "@chakra-ui/react"; // Make sure to import required components
 
 export const MainStatistics = () => {
     return (

@@ -1,7 +1,7 @@
 import { useCallback } from "react";
 import { useDropzone } from "react-dropzone";
 import { Box, HStack, Text, VStack, Image } from "@chakra-ui/react";
-import { ScanIcon } from "./Icon";
+
 import { blobToBase64, getDeviceId, resizeImage } from "../util";
 import { useWallet } from "@vechain/dapp-kit-react";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";

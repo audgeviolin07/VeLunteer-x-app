@@ -13,12 +13,12 @@ import { MdOutlineArrowOutward } from "react-icons/md";
 
 export const InfoCard = () => {
   return (
-    <Card w={"full"}>
+    <Card w={"half"}>
       <Box p={3}>
-        <VStack w={"full"} spacing={{ base: 2, md: 4 }}>
+        <VStack w={"fourth"} spacing={{ base: 3, md: 4 }}>
           <Image src="/ecology-bag-with-leaves.png" borderRadius={16} />
           <Flex
-            w={"full"}
+            w={"half"}
             justifyContent={"space-between"}
             direction={{ base: "column", md: "row" }}
             alignItems={"center"}
@@ -26,7 +26,7 @@ export const InfoCard = () => {
             <HStack alignSelf={{ base: "center", md: "flex-start" }}>
               <Image src="/logo.png" h={16} borderRadius={16} />
               <Text fontSize={24} fontWeight={800}>
-                EcoEarn
+                Give.ve
               </Text>
             </HStack>
             <Flex

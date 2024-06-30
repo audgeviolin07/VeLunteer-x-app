@@ -1,6 +1,6 @@
 import { useCallback } from "react";
 import { useDropzone } from "react-dropzone";
-import { Box, HStack, Text, VStack } from "@chakra-ui/react";
+import { Box, HStack, Text, VStack, Image } from "@chakra-ui/react";
 import { ScanIcon } from "./Icon";
 import { blobToBase64, getDeviceId, resizeImage } from "../util";
 import { useWallet } from "@vechain/dapp-kit-react";
@@ -94,23 +94,26 @@ export const Dropzone = () => {
         borderColor={isDragActive ? "green.300" : "gray.300"}
         borderStyle="dashed"
         borderRadius="md"
-        bg={isDragActive ? "green.100" : "gray.50"}
+        bgGradient={isDragActive ? "linear(to-r, green.500, green.700)" : "linear(to-r, green.400, green.600)"}
         textAlign="center"
         cursor="pointer"
         _hover={{
           borderColor: "green.500",
-          bg: "green.50",
+          bgGradient: "linear(to-r, green.500, green.700)",
+          boxShadow: "0 0 30px 10px rgba(0, 255, 0, 0.9)",
         }}
+        boxShadow="0 0 20px 5px rgba(0, 255, 0, 0.7)"
         w={"full"}
         h={"100px"}
-        display="flex" // Make the Box a flex container
-        alignItems="center" // Align items vertically in the center
-        justifyContent="center" // Center content horizontally
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
       >
         <input {...getInputProps()} />
         <HStack>
-          <ScanIcon size={120} color={"gray"} />
-          <Text>Upload to scan</Text>
+          
+          <Image src="/upload.png" h={16} borderRadius={16} />
+          <Text color="white" fontWeight="bold">Upload to scan</Text>
         </HStack>
       </Box>
     </VStack>

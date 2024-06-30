@@ -5,8 +5,8 @@ const Steps = [
   {
     icon: "/steps/icon1.png",
     size: "sm",
-    title: "Purchase eco-friendly products",
-    description: "Buy products that are eco-friendly and sustainable.",
+    title: "Donate to Local Food Banks",
+    description: "Donate your excess food to your local food banks and ask for a receipt.",
     style: { width: "10px", height: "10px" } 
   },
   {

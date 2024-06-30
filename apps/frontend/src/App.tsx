@@ -12,6 +12,7 @@ import {
 import { lightTheme } from "./theme";
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 import { MainImage } from "./components/MainImage";
+import { MainStatistics } from "./components/MainStatistics";
 
 // RECaptcha V3 site key (https://developers.google.com/recaptcha/docs/v3)
 const VITE_RECAPTCHA_V3_SITE_KEY = import.meta.env
@@ -39,26 +40,23 @@ function App() {
               alignItems={"flex-start"} // Align items to the left
               justifyContent={"flex-start"}
               flexDirection={"row"}
-              // width={"50%"} // Set container width to half
+            // width={"50%"} // Set container width to half
             >
+              <VStack p={4}>
+                <InfoCard />
+                <Instructions />
+                <Dropzone />
+              </VStack>
+              <VStack p={4} >
+                <Flex>
+                  <MainImage />
+                </Flex>
+                <MainStatistics />
+              </VStack>
 
-<VStack p={4}>
-              <InfoCard />
-              <Instructions />
-              <Dropzone />
-  </VStack>
-
-  <VStack p={4} >
-      <Flex>
-        <MainImage/>
-             
-              </Flex>
-  </VStack>
-              
             </Container>
           </Flex>
           <Footer />
-
           {/* MODALS  */}
           <SubmissionModal />
         </DAppKitProvider>

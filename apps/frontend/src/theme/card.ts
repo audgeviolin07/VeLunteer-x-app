@@ -29,7 +29,7 @@ const variants = {
         bg: props.colorMode === "dark" ? "#1A1A1A" : "#FFF",
         borderWidth: "1px",
         borderColor: props.colorMode === "dark" ? "#2D2D2F" : "gray.100",
-        boxShadow: "0 0 20px 5px rgba(255, 255, 255, 1)", // more intense white glow
+        boxShadow: "0 0 20px 5px rgba(255, 255, 255, 0.5)", // more intense white glow
         width: "50%", // half the width
       },
     }),

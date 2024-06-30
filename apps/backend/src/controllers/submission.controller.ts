@@ -35,8 +35,10 @@ export class SubmissionController {
 
       const validityFactor = validationResult['validityFactor'];
 
-      //if (validityFactor === 1) await this.contracts.registerSubmission(submissionRequest);
+      console.log('validationResult', validationResult);
 
+      if (validityFactor === 1) await this.contracts.registerSubmission(submissionRequest, validationResult['foodDescription']);
+ 
       res.status(200).json({ validation: validationResult });
     } catch (error) {
       next(error);

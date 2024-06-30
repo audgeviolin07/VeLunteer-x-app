@@ -1,4 +1,4 @@
-import { Box, Container, HStack, Image } from "@chakra-ui/react";
+import { Box, Container, HStack, Image, Text } from "@chakra-ui/react";
 import { ConnectWalletButton } from "./ConnectWalletButton";
 export const Navbar = () => {
   return (
@@ -20,11 +20,14 @@ export const Navbar = () => {
         alignItems={"center"}
         maxW={"container.xl"}
       >
-        <HStack flex={1} justifyContent={"start"}>
-          <Image src="/vebetterdao-logo.svg" />
-        </HStack>
+      
+      <HStack flex={1} justifyContent="start" alignItems="center">
+      <Image src="/apple.png" width="50px" height="50px" alt="Apple Logo" />
+      <Text fontSize="xl" ml={2}>B3TRBite</Text>
+    </HStack>
 
         <HStack flex={1} spacing={4} justifyContent={"end"}>
+          
           <ConnectWalletButton />
         </HStack>
       </Container>

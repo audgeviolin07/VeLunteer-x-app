@@ -45,7 +45,7 @@ function App() {
 <VStack p={4}>
               <InfoCard />
               <Instructions />
-              <Dropzone />
+              
   </VStack>
 
   <VStack p={4} >
@@ -54,13 +54,21 @@ function App() {
              
               </Flex>
   </VStack>
+
+  <VStack p={4} >
+      
+      <Dropzone />
+      <SubmissionModal />
+             
+        
+  </VStack>
               
             </Container>
           </Flex>
           <Footer />
 
           {/* MODALS  */}
-          <SubmissionModal />
+         
         </DAppKitProvider>
       </ChakraProvider>
     </GoogleReCaptchaProvider>

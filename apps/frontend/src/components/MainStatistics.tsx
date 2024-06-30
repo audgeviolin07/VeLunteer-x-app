@@ -29,8 +29,8 @@ export const MainStatistics = () => {
                     {/* <StatHelpText textShadow="0 0 20px rgba(255, 255, 255, 1)">files</StatHelpText> */}
                 </Stat>
                 <Stat>
-                    <StatLabel textShadow="0 0 20px rgba(255, 255, 255, 1)">Files Failed</StatLabel>
-                    <StatNumber textShadow="0 0 20px rgba(255, 255, 255, 1)">345</StatNumber>
+                    <StatLabel textShadow="0 0 20px rgba(255, 255, 255, 1)">Tons of Carbon Reduced</StatLabel>
+                    <StatNumber textShadow="0 0 20px rgba(255, 255, 255, 1)">2.45</StatNumber>
                     {/* <StatHelpText textShadow="0 0 20px rgba(255, 255, 255, 1)">files</StatHelpText> */}
                 </Stat>
             </StatGroup>

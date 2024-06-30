@@ -19,7 +19,7 @@ export const SubmissionModal = () => {
 
   const renderContent = useMemo(() => {
     const isValid = response?.validation.validityFactor === 1;
-    const value = Math.floor(response?.validation.donationValue ? response?.validation.donationValue * 6.25 : 0);
+    const value = Math.floor(response?.validation.donationValue ? response?.validation.donationValue * 6.25 * 0.2 : 0);
 
     return isValid ? (
       <VStack

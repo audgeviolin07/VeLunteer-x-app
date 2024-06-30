@@ -1,49 +1,30 @@
-import { Flex, Container, Box, VStack, HStack, Grid, GridItem, Text, Button, Image, Link } from "@chakra-ui/react";
-import React, { PureComponent } from 'react';
+import { Grid, GridItem } from "@chakra-ui/react";
+// import React, { PureComponent } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, BarChart, Bar } from 'recharts';
+
+// we will use mockup data for now
+// get real data from the backend once we have users
 
 const data = [
   {
-    name: 'Page A',
-    uv: 4000,
-    pv: 2400,
-    amt: 2400,
+    name: '7/1/21',
+    served: 19000,
   },
   {
-    name: 'Page B',
-    uv: 3000,
-    pv: 1398,
-    amt: 2210,
+    name: '7/7/21',
+    served: 25000,
   },
   {
-    name: 'Page C',
-    uv: 2000,
-    pv: 9800,
-    amt: 2290,
+    name: '7/14/21',
+    served: 22000,
   },
   {
-    name: 'Page D',
-    uv: 2780,
-    pv: 3908,
-    amt: 2000,
+    name: '7/21/21',
+    served: 35000,
   },
   {
-    name: 'Page E',
-    uv: 1890,
-    pv: 4800,
-    amt: 2181,
-  },
-  {
-    name: 'Page F',
-    uv: 2390,
-    pv: 3800,
-    amt: 2500,
-  },
-  {
-    name: 'Page G',
-    uv: 3490,
-    pv: 4300,
-    amt: 2100,
+    name: '7/28/21',
+    served: 36000,
   },
 ];
 
@@ -66,10 +47,10 @@ class LineDisplay extends PureComponent {
         >
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />
-          <YAxis />
+          <YAxis dataKey="served" domain={['dataMin', 'dataMax']} />
           <Tooltip />
           <Legend />
-          <Line type="monotone" dataKey="pv" stroke="#86EA8A" activeDot={{ r: 8 }} />
+          <Line type="monotone" dataKey="served" stroke="#86EA8A" activeDot={{ r: 8 }} />
         </LineChart>
       </ResponsiveContainer>
     );
@@ -78,33 +59,28 @@ class LineDisplay extends PureComponent {
 
 const data02 = [
   {
-    "name": "Group A",
-    "value": 2400,
+    "name": "Nuts",
+    "value": 16,
     "fill": "#86EA8A"
   },
   {
-    "name": "Group B",
-    "value": 4567,
+    "name": "Processed Food",
+    "value": 23,
     "fill": "#5DD362"
   },
   {
-    "name": "Group C",
-    "value": 1398,
+    "name": "Dairy Products",
+    "value": 22,
     "fill": "#45B876"
   },
   {
-    "name": "Group D",
-    "value": 9800,
-    "fill": "#45B876"
-  },
-  {
-    "name": "Group E",
-    "value": 3908,
+    "name": "Meat & Poultry",
+    "value": 28,
     "fill": "#3B963F"
   },
   {
-    "name": "Group F",
-    "value": 4800,
+    "name": "Fruits & Vegetables",
+    "value": 11,
     "fill": "#356E36"
   }
 ];
@@ -156,7 +132,7 @@ class PieDisplay extends PureComponent {
             outerRadius={"70%"}
             dataKey="value"
           />
-          <Legend align="left" verticalAlign="middle" width={100} />
+          <Legend align="left" verticalAlign="middle" width={170} />
         </PieChart>
       </ResponsiveContainer>
     );
@@ -165,34 +141,22 @@ class PieDisplay extends PureComponent {
 
 const data03 = [
   {
-    "name": "Page A",
-    "uv": 4000,
+    "name": "Location A",
+    "donation_value": 13.5,
   },
   {
-    "name": "Page B",
-    "uv": 3000,
+    "name": "Location B",
+    "donation_value": 9.5,
   },
   {
-    "name": "Page C",
-    "uv": 2000,
+    "name": "Location C",
+    "donation_value": 15.5,
   },
   {
-    "name": "Page D",
-    "uv": 2780,
-  },
-  {
-    "name": "Page E",
-    "uv": 1890,
-  },
-  {
-    "name": "Page F",
-    "uv": 2390,
-  },
-  {
-    "name": "Page G",
-    "uv": 3490,
+    "name": "Location D",
+    "donation_value": 12.5,
   }
-]
+];
 
 class BarDisplay extends PureComponent {
   static demoUrl = 'https://codesandbox.io/s/synchronized-line-charts-4z3og';
@@ -216,7 +180,7 @@ class BarDisplay extends PureComponent {
           <YAxis />
           <Tooltip />
           <Legend />
-          <Bar dataKey="uv" fill="#86EA8A" />
+          <Bar dataKey="donation_value" fill="#86EA8A" />
         </BarChart>
       </ResponsiveContainer>
     );

@@ -1,6 +1,6 @@
 import { Grid, GridItem } from "@chakra-ui/react";
 import { PureComponent } from 'react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, BarChart, Bar } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, BarChart, Bar, AreaChart, Area } from 'recharts';
 
 // we will use mockup data for now
 // get real data from the backend once we have users
@@ -187,6 +187,58 @@ class BarDisplay extends PureComponent {
   }
 }
 
+const data04 = [
+  {
+    name: '7/1/21',
+    "emission_reduced": 300,
+  },
+  {
+    name: '7/7/21',
+    "emission_reduced": 1000,
+  },
+  {
+    name: '7/14/21',
+    "emission_reduced": 900,
+  },
+  {
+    name: '7/21/21',
+    "emission_reduced": 1350,
+  },
+  {
+    name: '7/28/21',
+    "emission_reduced": 1490,
+  },
+];
+
+class AreaDisplay extends PureComponent {
+  static demoUrl = 'https://codesandbox.io/p/sandbox/line-chart-width-xaxis-padding-8v7952';
+
+  render() {
+    return (
+      <ResponsiveContainer width="100%" height="100%">
+        <AreaChart
+          width={500}
+          height={300}
+          data={data04}
+          margin={{
+            top: 5,
+            right: 30,
+            left: 20,
+            bottom: 5,
+          }}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="name" />
+          <YAxis dataKey="served" domain={[0, 2000]} />
+          <Tooltip />
+          <Legend />
+          <Area type="monotone" dataKey="emission_reduced" stroke="#86EA8A" fillOpacity={1} fill="#86EA8A" />
+        </AreaChart>
+      </ResponsiveContainer>
+    );
+  }
+}
+
 
 export const Dashboard = () => {
     return (
@@ -208,7 +260,7 @@ export const Dashboard = () => {
             <BarDisplay />
           </GridItem>
           <GridItem colSpan={1} rowSpan={1}>
-            <LineDisplay />
+            <AreaDisplay />
           </GridItem>
         </Grid>
     );

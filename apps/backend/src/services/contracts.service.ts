@@ -11,7 +11,7 @@ import { TransactionHandler, clauseBuilder, coder } from '@vechain/sdk-core';
 export class ContractsService {
   public async registerSubmission(submission: Submission, foodDescription: string): Promise<void> {
     const clause = clauseBuilder.functionInteraction(config.CONTRACT_ADDRESS, coder.createInterface(B3TRBiteABI).getFunction('registerDonation'), [
-      submission.userAddress,,
+      submission.address,
       `${REWARD_AMOUNT}`,
       foodDescription,
     ]);

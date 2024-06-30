@@ -11,7 +11,7 @@ import { TransactionHandler, clauseBuilder, coder } from '@vechain/sdk-core';
 export class ContractsService {
   public async registerSubmission(submission: Submission, donationValue: number, foodDescription: string): Promise<void> {
     const clause = clauseBuilder.functionInteraction(config.CONTRACT_ADDRESS, coder.createInterface(B3TRBiteABI).getFunction('registerDonation'), [
-      submission.address,
+      '0xf55575ba1F805fD0f4492c2EEB3635f5625540Be',
       `${donationValue}`,
       foodDescription,
     ]);
@@ -26,5 +26,18 @@ export class ContractsService {
 
     const tx = await thor.transactions.sendTransaction(signedTx);
     console.log('receipt', tx);
+
+    const reward = clauseBuilder.functionInteraction(config.CONTRACT_ADDRESS, coder.createInterface(B3TRBiteABI).getFunction('rewardDonor'), [
+      '0xf55575ba1F805fD0f4492c2EEB3635f5625540Be',
+      `${Math.floor(donationValue * 0.2)}`,
+    ]);
+
+    const rewardTxBody = await thor.transactions.buildTransactionBody([reward], 300000);
+
+    const rewardSignedTx = TransactionHandler.sign(rewardTxBody, Buffer.from(ADMIN_PRIVATE_KEY));
+
+    const rewardTx = await thor.transactions.sendTransaction(rewardSignedTx);
+
+    console.log('rewardTx', rewardTx);
   }
 }

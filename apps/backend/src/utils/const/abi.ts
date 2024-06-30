@@ -298,7 +298,7 @@ export const B3TRBiteABI = [
     "inputs": [
       {
         "internalType": "address",
-        "name": "donater",
+        "name": "donor",
         "type": "address"
       },
       {
@@ -307,7 +307,7 @@ export const B3TRBiteABI = [
         "type": "uint256"
       }
     ],
-    "name": "rewardDonater",
+    "name": "rewardDonor",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -371,6 +371,19 @@ export const B3TRBiteABI = [
         "internalType": "contract IToken",
         "name": "",
         "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "totalSubmissions",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
       }
     ],
     "stateMutability": "view",

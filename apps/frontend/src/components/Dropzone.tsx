@@ -102,7 +102,7 @@ export const Dropzone = () => {
           bg: "green.50",
         }}
         w={"full"}
-        h={"200px"}
+        h={"100px"}
         display="flex" // Make the Box a flex container
         alignItems="center" // Align items vertically in the center
         justifyContent="center" // Center content horizontally

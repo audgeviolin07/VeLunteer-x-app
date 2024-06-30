@@ -5,11 +5,10 @@ import {
   Image,
   VStack,
   Text,
-  Button,
   Flex,
   Link,
 } from "@chakra-ui/react";
-import { MdOutlineArrowOutward } from "react-icons/md";
+
 
 export const InfoCard = () => {
   return (

@@ -15,7 +15,6 @@ import { MainStatistics } from "./components/MainStatistics";
 import { Dashboard } from "./components/Dashboard";
 import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 import { MdOutlineArrowOutward } from "react-icons/md";
-import { ButtonStyle } from "./button";
 
 // RECaptcha V3 site key (https://developers.google.com/recaptcha/docs/v3)
 const VITE_RECAPTCHA_V3_SITE_KEY = import.meta.env.VITE_RECAPTCHA_V3_SITE_KEY as string;

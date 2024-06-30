@@ -3,21 +3,20 @@ import { Step } from "./Step";
 
 const Steps = [
   {
-    icon: "/steps/inimage1.png",
+    icon: "/steps/icon1.png",
     size: "sm",
     title: "Purchase eco-friendly products",
     description: "Buy products that are eco-friendly and sustainable.",
     style: { width: "10px", height: "10px" } 
   },
   {
-    icon: "/steps/inimage2.png",
+    icon: "/steps/icon2.png",
     size: "sm",
     title: "Upload the receipt",
-    description: "Upload your receipt and AI will verify the products.",
-    style: { width: "50%", height: "50%" } 
+    description: "Upload your receipt and AI will verify the donated food products.",
   },
   {
-    icon: "/steps/inimage3.png",
+    icon: "/steps/icon3.png",
     size: "sm",
     title: "Earn rewards",
     description: "Earn B3TR for purchasing eco-friendly products.",

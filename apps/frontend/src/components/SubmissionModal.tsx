@@ -19,6 +19,7 @@ export const SubmissionModal = () => {
 
   const renderContent = useMemo(() => {
     const isValid = response?.validation.validityFactor === 1;
+    const value = Math.floor(response?.validation.donationValue * 6.25);
 
     return isValid ? (
       <VStack
@@ -37,7 +38,7 @@ export const SubmissionModal = () => {
         </Text>
         <HStack>
           <Text fontSize={24} fontWeight={400}>
-            You've earned 1
+            You've earned {value}
           </Text>
           <Image src="b3tr-token.svg" />
         </HStack>

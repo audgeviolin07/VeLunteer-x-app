@@ -1,5 +1,5 @@
 import { Grid, GridItem } from "@chakra-ui/react";
-import React, { PureComponent } from 'react';
+import { PureComponent } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, BarChart, Bar } from 'recharts';
 
 // we will use mockup data for now

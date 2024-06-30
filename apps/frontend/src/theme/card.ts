@@ -36,7 +36,7 @@ const variants = {
   secondaryBoxShadow: (props: StyleFunctionProps) =>
     definePartsStyle({
       container: {
-        boxShadow: "0 0 20px 5px rgba(255, 255, 255, 1), inset 0px 0px 100px 5px rgba(177, 241, 108, 1)", // more intense white glow and secondary box shadow
+        boxShadow: "0 0 10px 5px rgba(255, 255, 255, 1), inset 0px 0px 30px 5px rgba(177, 241, 108, 1)", // more intense white glow and secondary box shadow
         bg: props.colorMode === "dark" ? "#1A1A1A" : "#FFF",
         borderWidth: "1px",
         borderColor: props.colorMode === "dark" ? "#2D2D2F" : "gray.100",

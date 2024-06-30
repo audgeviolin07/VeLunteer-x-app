@@ -25,7 +25,7 @@ export const Instructions = () => {
       <Flex
         p={{ base: 4 }}
         w="100%"
-        direction={{ base: "column", md: "row" }}
+        direction={{ base: "column"}}
       >
         {Steps.map((step, index) => (
           <Step key={index} {...step} />

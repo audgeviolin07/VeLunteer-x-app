@@ -23,10 +23,10 @@ export const InfoCard = () => {
             direction={{ base: "column", md: "row" }}
             alignItems={"center"}
           >
-            <HStack alignSelf={{ base: "center", md: "flex-start" }}>
-              <Image src="/logo.png" h={16} borderRadius={16} />
+            <HStack alignSelf={{ base: "left", md: "flex-start" }}>
+              <Image src="/vlnlogo.png" h={16} borderRadius={16} />
               <Text fontSize={24} fontWeight={800}>
-                Give.ve
+              B3TRBite
               </Text>
             </HStack>
             <Flex

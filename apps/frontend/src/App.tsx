@@ -13,6 +13,7 @@ import { lightTheme } from "./theme";
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 import { MainImage } from "./components/MainImage";
 import { MainStatistics } from "./components/MainStatistics";
+import { MainStatistics } from "./components/MainStatistics";
 
 // RECaptcha V3 site key (https://developers.google.com/recaptcha/docs/v3)
 const VITE_RECAPTCHA_V3_SITE_KEY = import.meta.env

@@ -3,22 +3,19 @@ import { ethers } from 'hardhat';
 async function deployMugshot() {
     const [owner] = await ethers.getSigners();
 
-    const ecoEarn = await ethers.getContractFactory('EcoEarn');
+    const brtrBytes = await ethers.getContractFactory('B3TRBite');
 
-    const ecoEarnInstance = await ecoEarn.deploy(
-        owner,
+    const brtrBytesInstance = await brtrBytes.deploy(
         config.TOKEN_ADDRESS,
-        config.CYCLE_DURATION,
-        config.MAX_SUBMISSIONS_PER_CYCLE,
     );
 
-    const ecoEarnAddress = await ecoEarnInstance.getAddress();
+    const brtrBytesAddress = await brtrBytesInstance.getAddress();
 
-    console.log(`EcoEarn deployed to: ${ecoEarnAddress}`);
+    console.log(`B3TRBite deployed to: ${brtrBytesAddress}`);
 
     updateConfig({
         ...config,
-        CONTRACT_ADDRESS: ecoEarnAddress,
+        CONTRACT_ADDRESS: brtrBytesAddress,
     });
 }
 

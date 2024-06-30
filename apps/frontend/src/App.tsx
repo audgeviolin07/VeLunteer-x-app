@@ -1,6 +1,6 @@
 
 import { DAppKitProvider } from "@vechain/dapp-kit-react";
-import { ChakraProvider, Container, Flex, VStack } from "@chakra-ui/react";
+import { ChakraProvider, Container, Flex, VStack, Button } from "@chakra-ui/react";
 import {
   Dropzone,
   Footer,
@@ -53,6 +53,8 @@ function App() {
                   <MainImage />
                 </Flex>
                 <MainStatistics />
+          
+     
               </VStack>
 
             </Container>

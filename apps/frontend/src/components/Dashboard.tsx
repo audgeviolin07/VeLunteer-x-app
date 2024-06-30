@@ -7,23 +7,23 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsi
 
 const data = [
   {
-    name: '7/1/21',
+    name: '7/1/24',
     served: 19000,
   },
   {
-    name: '7/7/21',
+    name: '8/1/24',
     served: 25000,
   },
   {
-    name: '7/14/21',
+    name: '9/1/24',
     served: 22000,
   },
   {
-    name: '7/21/21',
+    name: '10/1/24',
     served: 35000,
   },
   {
-    name: '7/28/21',
+    name: '11/1/24',
     served: 36000,
   },
 ];
@@ -189,23 +189,23 @@ class BarDisplay extends PureComponent {
 
 const data04 = [
   {
-    name: '7/1/21',
+    name: '7/1/24',
     "emission_reduced": 300,
   },
   {
-    name: '7/7/21',
+    name: '8/1/24',
     "emission_reduced": 1000,
   },
   {
-    name: '7/14/21',
+    name: '9/1/24',
     "emission_reduced": 900,
   },
   {
-    name: '7/21/21',
+    name: '10/1/24',
     "emission_reduced": 1350,
   },
   {
-    name: '7/28/21',
+    name: '11/1/24',
     "emission_reduced": 1490,
   },
 ];

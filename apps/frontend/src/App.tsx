@@ -15,6 +15,7 @@ import { MainStatistics } from "./components/MainStatistics";
 import { Dashboard } from "./components/Dashboard";
 import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 import { MdOutlineArrowOutward } from "react-icons/md";
+import { ButtonStyle } from "./button";
 
 // RECaptcha V3 site key (https://developers.google.com/recaptcha/docs/v3)
 const VITE_RECAPTCHA_V3_SITE_KEY = import.meta.env.VITE_RECAPTCHA_V3_SITE_KEY as string;
@@ -81,16 +82,22 @@ function NavigateButton() {
   
   return (
     <Button
-      rounded={"full"}
-      leftIcon={<MdOutlineArrowOutward />}
-      colorScheme="primary"
-      size={"md"}
-      mt={{ base: 2, md: 0 }}
-      ml={{ base: 0, md: 2 }}
-      onClick={() => navigate("/dashboard")}
-    >
-      Dashboard
-    </Button>
+    rounded={"full"}
+    leftIcon={<MdOutlineArrowOutward />}
+    size={"lg"}
+    mt={{ base: 2, md: 0 }}
+    ml={{ base: 0, md: 2 }}
+    onClick={() => navigate("/dashboard")}
+    bgGradient="linear(to-r, green.400, green.600)" // Slightly darker green gradient background
+    color="white" // Text color
+    _hover={{
+      bgGradient: "linear(to-r, green.500, green.700)", // Darker gradient on hover
+      boxShadow: "0 0 20px 5px rgba(0, 255, 0, 0.7)" // Glow effect on hover
+    }}
+    boxShadow="0 0 10px 2px rgba(0, 255, 0, 0.5)" // Initial glow effect
+  >
+    Dashboard
+  </Button>
   );
 }
 

@@ -1,15 +1,9 @@
 import {
-    Box,
-    Card,
-    HStack,
-    Image,
-    VStack,
-    Text,
-    Button,
-    Flex,
-    Link,
+    
+  Image,
+    
+    Flex
   } from "@chakra-ui/react";
-  import { MdOutlineArrowOutward } from "react-icons/md";
   
   export const MainImage = () => {
     return (
